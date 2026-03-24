@@ -10,8 +10,8 @@ Modify the ports and passwords as required in `.env`, and then deploy the set of
 ```bash
 docker compose -f docker-compose.yaml -p graphql_beacon up -d
 ```
-The loading process can be monitored using any PostgreSQL client to connect to the `beacon` database on port `5433` (or the port indicated in .env) with username `postgres` and password `password_for_beacon_postgres`.
+The loading process can be monitored using any PostgreSQL client to connect to the `beacon` database on port `5433` (or the port indicated in .env) with username `postgres` and password `password_for_beacon_postgres` (or values indicated in `.env`).
 
 Once the loading process is complete, the required views need to be created: execute the scripts contained in `src/main/resources/create_views` with a PostgreSQL client.
 
-Then access the GraphQL API at port `9080` (or the port indicated in `.env`.
+Then access the GraphQL API at port `9080` (or the port indicated in `.env`).
